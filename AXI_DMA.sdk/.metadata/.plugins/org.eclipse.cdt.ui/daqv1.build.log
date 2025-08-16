@@ -1,0 +1,8 @@
+21:37:33 **** Incremental Build of configuration Debug for project daqv1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+
+21:37:36 Build Finished (took 2s.342ms)
+

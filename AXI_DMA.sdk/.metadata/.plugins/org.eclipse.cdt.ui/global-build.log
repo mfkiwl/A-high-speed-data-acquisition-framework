@@ -1,0 +1,659 @@
+00:14:24 **** Build of project daqv1_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/axidma_v9_8/src"
+make -C ps7_cortexa9_0/libsrc/axidma_v9_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/clk_wiz_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/clk_wiz_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_10/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_10/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_8/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/axidma_v9_8/src"
+make -C ps7_cortexa9_0/libsrc/axidma_v9_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling axidma"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/clk_wiz_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/clk_wiz_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling Clkocking Wizard"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_10/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_10/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_8/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from usleep.c:56:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:51:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:49:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from sleep.c:53:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+00:16:59 **** Build of configuration Debug for project daqv1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/AXI_DMA.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AXI_DMA.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AXI_DMA.d" -MT"src/AXI_DMA.o" -o "src/AXI_DMA.o" "../src/AXI_DMA.c"
+'Finished building: ../src/AXI_DMA.c'
+' '
+'Building file: ../src/COMMON.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/COMMON.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/COMMON.d" -MT"src/COMMON.o" -o "src/COMMON.o" "../src/COMMON.c"
+'Finished building: ../src/COMMON.c'
+' '
+'Building file: ../src/ISR.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ISR.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ISR.d" -MT"src/ISR.o" -o "src/ISR.o" "../src/ISR.c"
+'Finished building: ../src/ISR.c'
+' '
+'Building file: ../src/SCU_GIC.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SCU_GIC.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/SCU_GIC.d" -MT"src/SCU_GIC.o" -o "src/SCU_GIC.o" "../src/SCU_GIC.c"
+'Finished building: ../src/SCU_GIC.c'
+' '
+'Building file: ../src/SCU_TIMER.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SCU_TIMER.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/SCU_TIMER.d" -MT"src/SCU_TIMER.o" -o "src/SCU_TIMER.o" "../src/SCU_TIMER.c"
+'Finished building: ../src/SCU_TIMER.c'
+' '
+'Building file: ../src/clk_wiz.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/clk_wiz.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/clk_wiz.d" -MT"src/clk_wiz.o" -o "src/clk_wiz.o" "../src/clk_wiz.c"
+'Finished building: ../src/clk_wiz.c'
+' '
+'Building file: ../src/gpio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gpio.d" -MT"src/gpio.o" -o "src/gpio.o" "../src/gpio.c"
+'Finished building: ../src/gpio.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/uart.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/uart.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/uart.d" -MT"src/uart.o" -o "src/uart.o" "../src/uart.c"
+'Finished building: ../src/uart.c'
+' '
+'Building target: daqv1.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../daqv1_bsp/ps7_cortexa9_0/lib -o "daqv1.elf"  ./src/AXI_DMA.o ./src/COMMON.o ./src/ISR.o ./src/SCU_GIC.o ./src/SCU_TIMER.o ./src/clk_wiz.o ./src/gpio.o ./src/main.o ./src/uart.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: daqv1.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size daqv1.elf  |tee "daqv1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  60912	   3152	  24808	  88872	  15b28	daqv1.elf
+'Finished building: daqv1.elf.size'
+' '
+00:20:26 **** Incremental Build of configuration Debug for project daqv1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+00:21:37 **** Incremental Build of configuration Debug for project daqv1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+00:58:08 **** Auto Build of configuration Debug for project daqv1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:30:11: warning: unused variable 'Error_Cnt' [-Wunused-variable]
+  uint16_t Error_Cnt = 0;  //´íÎó¼ÆÊý
+           ^~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: daqv1.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../daqv1_bsp/ps7_cortexa9_0/lib -o "daqv1.elf"  ./src/AXI_DMA.o ./src/COMMON.o ./src/ISR.o ./src/SCU_GIC.o ./src/SCU_TIMER.o ./src/clk_wiz.o ./src/gpio.o ./src/main.o ./src/uart.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: daqv1.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size daqv1.elf  |tee "daqv1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  54012	   3152	  24808	  81972	  14034	daqv1.elf
+'Finished building: daqv1.elf.size'
+' '
+00:58:23 **** Auto Build of configuration Debug for project daqv1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: daqv1.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../daqv1_bsp/ps7_cortexa9_0/lib -o "daqv1.elf"  ./src/AXI_DMA.o ./src/COMMON.o ./src/ISR.o ./src/SCU_GIC.o ./src/SCU_TIMER.o ./src/clk_wiz.o ./src/gpio.o ./src/main.o ./src/uart.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: daqv1.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size daqv1.elf  |tee "daqv1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  54012	   3152	  24808	  81972	  14034	daqv1.elf
+'Finished building: daqv1.elf.size'
+' '
+01:02:12 **** Auto Build of configuration Debug for project daqv1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: daqv1.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../daqv1_bsp/ps7_cortexa9_0/lib -o "daqv1.elf"  ./src/AXI_DMA.o ./src/COMMON.o ./src/ISR.o ./src/SCU_GIC.o ./src/SCU_TIMER.o ./src/clk_wiz.o ./src/gpio.o ./src/main.o ./src/uart.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: daqv1.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size daqv1.elf  |tee "daqv1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  54268	   3152	  24808	  82228	  14134	daqv1.elf
+'Finished building: daqv1.elf.size'
+' '
+01:02:40 **** Incremental Build of configuration Debug for project daqv1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+01:48:37 **** Auto Build of configuration Debug for project daqv1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/AXI_DMA.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AXI_DMA.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AXI_DMA.d" -MT"src/AXI_DMA.o" -o "src/AXI_DMA.o" "../src/AXI_DMA.c"
+In file included from ../src/COMMON.h:29:0,
+                 from ../src/AXI_DMA.h:4,
+                 from ../src/AXI_DMA.c:1:
+../src/gpio.h:16:0: warning: "EMIO_START_PIN" redefined
+ #define EMIO_START_PIN  55   // this bit reset the input fifo
+ 
+../src/gpio.h:15:0: note: this is the location of the previous definition
+ #define EMIO_START_PIN  54   // this bit is control the write enable signal
+ 
+'Finished building: ../src/AXI_DMA.c'
+' '
+'Building file: ../src/COMMON.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/COMMON.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/COMMON.d" -MT"src/COMMON.o" -o "src/COMMON.o" "../src/COMMON.c"
+In file included from ../src/COMMON.h:29:0,
+                 from ../src/COMMON.c:14:
+../src/gpio.h:16:0: warning: "EMIO_START_PIN" redefined
+ #define EMIO_START_PIN  55   // this bit reset the input fifo
+ 
+../src/gpio.h:15:0: note: this is the location of the previous definition
+ #define EMIO_START_PIN  54   // this bit is control the write enable signal
+ 
+'Finished building: ../src/COMMON.c'
+' '
+'Building file: ../src/ISR.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ISR.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ISR.d" -MT"src/ISR.o" -o "src/ISR.o" "../src/ISR.c"
+In file included from ../src/COMMON.h:29:0,
+                 from ../src/ISR.h:4,
+                 from ../src/ISR.c:15:
+../src/gpio.h:16:0: warning: "EMIO_START_PIN" redefined
+ #define EMIO_START_PIN  55   // this bit reset the input fifo
+ 
+../src/gpio.h:15:0: note: this is the location of the previous definition
+ #define EMIO_START_PIN  54   // this bit is control the write enable signal
+ 
+'Finished building: ../src/ISR.c'
+' '
+'Building file: ../src/SCU_GIC.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SCU_GIC.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/SCU_GIC.d" -MT"src/SCU_GIC.o" -o "src/SCU_GIC.o" "../src/SCU_GIC.c"
+In file included from ../src/COMMON.h:29:0,
+                 from ../src/SCU_GIC.h:5,
+                 from ../src/SCU_GIC.c:14:
+../src/gpio.h:16:0: warning: "EMIO_START_PIN" redefined
+ #define EMIO_START_PIN  55   // this bit reset the input fifo
+ 
+../src/gpio.h:15:0: note: this is the location of the previous definition
+ #define EMIO_START_PIN  54   // this bit is control the write enable signal
+ 
+'Finished building: ../src/SCU_GIC.c'
+' '
+'Building file: ../src/SCU_TIMER.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SCU_TIMER.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/SCU_TIMER.d" -MT"src/SCU_TIMER.o" -o "src/SCU_TIMER.o" "../src/SCU_TIMER.c"
+In file included from ../src/COMMON.h:29:0,
+                 from ../src/SCU_TIMER.h:4,
+                 from ../src/SCU_TIMER.c:14:
+../src/gpio.h:16:0: warning: "EMIO_START_PIN" redefined
+ #define EMIO_START_PIN  55   // this bit reset the input fifo
+ 
+../src/gpio.h:15:0: note: this is the location of the previous definition
+ #define EMIO_START_PIN  54   // this bit is control the write enable signal
+ 
+'Finished building: ../src/SCU_TIMER.c'
+' '
+'Building file: ../src/gpio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gpio.d" -MT"src/gpio.o" -o "src/gpio.o" "../src/gpio.c"
+In file included from ../src/gpio.c:1:0:
+../src/gpio.h:16:0: warning: "EMIO_START_PIN" redefined
+ #define EMIO_START_PIN  55   // this bit reset the input fifo
+ 
+../src/gpio.h:15:0: note: this is the location of the previous definition
+ #define EMIO_START_PIN  54   // this bit is control the write enable signal
+ 
+'Finished building: ../src/gpio.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/COMMON.h:29:0,
+                 from ../src/main.c:11:
+../src/gpio.h:16:0: warning: "EMIO_START_PIN" redefined
+ #define EMIO_START_PIN  55   // this bit reset the input fifo
+ 
+../src/gpio.h:15:0: note: this is the location of the previous definition
+ #define EMIO_START_PIN  54   // this bit is control the write enable signal
+ 
+'Finished building: ../src/main.c'
+' '
+'Building target: daqv1.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../daqv1_bsp/ps7_cortexa9_0/lib -o "daqv1.elf"  ./src/AXI_DMA.o ./src/COMMON.o ./src/ISR.o ./src/SCU_GIC.o ./src/SCU_TIMER.o ./src/clk_wiz.o ./src/gpio.o ./src/main.o ./src/uart.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: daqv1.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size daqv1.elf  |tee "daqv1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  54268	   3152	  24808	  82228	  14134	daqv1.elf
+'Finished building: daqv1.elf.size'
+' '
+01:49:19 **** Auto Build of configuration Debug for project daqv1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/AXI_DMA.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AXI_DMA.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AXI_DMA.d" -MT"src/AXI_DMA.o" -o "src/AXI_DMA.o" "../src/AXI_DMA.c"
+'Finished building: ../src/AXI_DMA.c'
+' '
+'Building file: ../src/COMMON.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/COMMON.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/COMMON.d" -MT"src/COMMON.o" -o "src/COMMON.o" "../src/COMMON.c"
+'Finished building: ../src/COMMON.c'
+' '
+'Building file: ../src/ISR.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ISR.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ISR.d" -MT"src/ISR.o" -o "src/ISR.o" "../src/ISR.c"
+'Finished building: ../src/ISR.c'
+' '
+'Building file: ../src/SCU_GIC.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SCU_GIC.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/SCU_GIC.d" -MT"src/SCU_GIC.o" -o "src/SCU_GIC.o" "../src/SCU_GIC.c"
+'Finished building: ../src/SCU_GIC.c'
+' '
+'Building file: ../src/SCU_TIMER.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SCU_TIMER.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/SCU_TIMER.d" -MT"src/SCU_TIMER.o" -o "src/SCU_TIMER.o" "../src/SCU_TIMER.c"
+'Finished building: ../src/SCU_TIMER.c'
+' '
+'Building file: ../src/gpio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gpio.d" -MT"src/gpio.o" -o "src/gpio.o" "../src/gpio.c"
+'Finished building: ../src/gpio.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: daqv1.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../daqv1_bsp/ps7_cortexa9_0/lib -o "daqv1.elf"  ./src/AXI_DMA.o ./src/COMMON.o ./src/ISR.o ./src/SCU_GIC.o ./src/SCU_TIMER.o ./src/clk_wiz.o ./src/gpio.o ./src/main.o ./src/uart.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: daqv1.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size daqv1.elf  |tee "daqv1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  54268	   3152	  24808	  82228	  14134	daqv1.elf
+'Finished building: daqv1.elf.size'
+' '
+01:49:53 **** Auto Build of configuration Debug for project daqv1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/gpio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gpio.d" -MT"src/gpio.o" -o "src/gpio.o" "../src/gpio.c"
+'Finished building: ../src/gpio.c'
+' '
+'Building target: daqv1.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../daqv1_bsp/ps7_cortexa9_0/lib -o "daqv1.elf"  ./src/AXI_DMA.o ./src/COMMON.o ./src/ISR.o ./src/SCU_GIC.o ./src/SCU_TIMER.o ./src/clk_wiz.o ./src/gpio.o ./src/main.o ./src/uart.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: daqv1.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size daqv1.elf  |tee "daqv1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  54332	   3152	  24808	  82292	  14174	daqv1.elf
+'Finished building: daqv1.elf.size'
+' '
+01:54:36 **** Auto Build of configuration Debug for project daqv1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: daqv1.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../daqv1_bsp/ps7_cortexa9_0/lib -o "daqv1.elf"  ./src/AXI_DMA.o ./src/COMMON.o ./src/ISR.o ./src/SCU_GIC.o ./src/SCU_TIMER.o ./src/clk_wiz.o ./src/gpio.o ./src/main.o ./src/uart.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: daqv1.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size daqv1.elf  |tee "daqv1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  54524	   3152	  24808	  82484	  14234	daqv1.elf
+'Finished building: daqv1.elf.size'
+' '
+01:55:50 **** Auto Build of configuration Debug for project daqv1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: daqv1.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../daqv1_bsp/ps7_cortexa9_0/lib -o "daqv1.elf"  ./src/AXI_DMA.o ./src/COMMON.o ./src/ISR.o ./src/SCU_GIC.o ./src/SCU_TIMER.o ./src/clk_wiz.o ./src/gpio.o ./src/main.o ./src/uart.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: daqv1.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size daqv1.elf  |tee "daqv1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  54524	   3152	  24808	  82484	  14234	daqv1.elf
+'Finished building: daqv1.elf.size'
+' '
+01:58:15 **** Auto Build of configuration Debug for project daqv1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: daqv1.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../daqv1_bsp/ps7_cortexa9_0/lib -o "daqv1.elf"  ./src/AXI_DMA.o ./src/COMMON.o ./src/ISR.o ./src/SCU_GIC.o ./src/SCU_TIMER.o ./src/clk_wiz.o ./src/gpio.o ./src/main.o ./src/uart.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: daqv1.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size daqv1.elf  |tee "daqv1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  54524	   3152	  24808	  82484	  14234	daqv1.elf
+'Finished building: daqv1.elf.size'
+' '
+02:04:12 **** Clean-only build of project daqv1_bsp ****
+make -k clean 
+make -C ps7_cortexa9_0/libsrc/axidma_v9_8/src -s clean 
+make -C ps7_cortexa9_0/libsrc/clk_wiz_v1_2/src -s clean 
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s clean 
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s clean 
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s clean 
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scugic_v3_10/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s clean 
+make -C ps7_cortexa9_0/libsrc/standalone_v6_8/src -s clean 
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s clean 
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s clean 
+rm -f ps7_cortexa9_0/lib/libxil.a
+02:04:23 **** Clean-only build of configuration Debug for project daqv1 ****
+make clean 
+rm -rf  ./src/AXI_DMA.o ./src/COMMON.o ./src/ISR.o ./src/SCU_GIC.o ./src/SCU_TIMER.o ./src/clk_wiz.o ./src/gpio.o ./src/main.o ./src/uart.o  ./src/AXI_DMA.d ./src/COMMON.d ./src/ISR.d ./src/SCU_GIC.d ./src/SCU_TIMER.d ./src/clk_wiz.d ./src/gpio.d ./src/main.d ./src/uart.d  daqv1.elf.size  daqv1.elf
+' '
+02:04:24 **** Build of project daqv1_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/axidma_v9_8/src"
+make -C ps7_cortexa9_0/libsrc/axidma_v9_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/clk_wiz_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/clk_wiz_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_10/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_10/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_8/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/axidma_v9_8/src"
+make -C ps7_cortexa9_0/libsrc/axidma_v9_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling axidma"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/clk_wiz_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/clk_wiz_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling Clkocking Wizard"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_10/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_10/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_8/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from usleep.c:56:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:51:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:49:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from sleep.c:53:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+02:06:55 **** Build of configuration Debug for project daqv1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/AXI_DMA.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AXI_DMA.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AXI_DMA.d" -MT"src/AXI_DMA.o" -o "src/AXI_DMA.o" "../src/AXI_DMA.c"
+'Finished building: ../src/AXI_DMA.c'
+' '
+'Building file: ../src/COMMON.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/COMMON.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/COMMON.d" -MT"src/COMMON.o" -o "src/COMMON.o" "../src/COMMON.c"
+'Finished building: ../src/COMMON.c'
+' '
+'Building file: ../src/ISR.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ISR.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ISR.d" -MT"src/ISR.o" -o "src/ISR.o" "../src/ISR.c"
+'Finished building: ../src/ISR.c'
+' '
+'Building file: ../src/SCU_GIC.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SCU_GIC.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/SCU_GIC.d" -MT"src/SCU_GIC.o" -o "src/SCU_GIC.o" "../src/SCU_GIC.c"
+'Finished building: ../src/SCU_GIC.c'
+' '
+'Building file: ../src/SCU_TIMER.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SCU_TIMER.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/SCU_TIMER.d" -MT"src/SCU_TIMER.o" -o "src/SCU_TIMER.o" "../src/SCU_TIMER.c"
+'Finished building: ../src/SCU_TIMER.c'
+' '
+'Building file: ../src/clk_wiz.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/clk_wiz.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/clk_wiz.d" -MT"src/clk_wiz.o" -o "src/clk_wiz.o" "../src/clk_wiz.c"
+'Finished building: ../src/clk_wiz.c'
+' '
+'Building file: ../src/gpio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/gpio.d" -MT"src/gpio.o" -o "src/gpio.o" "../src/gpio.c"
+'Finished building: ../src/gpio.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/uart.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/uart.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../daqv1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/uart.d" -MT"src/uart.o" -o "src/uart.o" "../src/uart.c"
+'Finished building: ../src/uart.c'
+' '
+'Building target: daqv1.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../daqv1_bsp/ps7_cortexa9_0/lib -o "daqv1.elf"  ./src/AXI_DMA.o ./src/COMMON.o ./src/ISR.o ./src/SCU_GIC.o ./src/SCU_TIMER.o ./src/clk_wiz.o ./src/gpio.o ./src/main.o ./src/uart.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: daqv1.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size daqv1.elf  |tee "daqv1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  54524	   3152	  24808	  82484	  14234	daqv1.elf
+'Finished building: daqv1.elf.size'
+' '
+02:08:29 **** Incremental Build of configuration Debug for project daqv1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+06:51:39 **** Incremental Build of configuration Debug for project daqv1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+06:56:08 **** Incremental Build of configuration Debug for project daqv1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+21:37:33 **** Incremental Build of configuration Debug for project daqv1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
