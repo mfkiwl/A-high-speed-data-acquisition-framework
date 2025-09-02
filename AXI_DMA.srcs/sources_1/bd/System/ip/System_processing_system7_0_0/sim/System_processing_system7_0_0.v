@@ -171,9 +171,9 @@ PS_SRSTB,
 PS_CLK, 
 PS_PORB 
 );
-input [1 : 0] GPIO_I;
-output [1 : 0] GPIO_O;
-output [1 : 0] GPIO_T;
+input [32 : 0] GPIO_I;
+output [32 : 0] GPIO_O;
+output [32 : 0] GPIO_T;
 output UART0_TX;
 input UART0_RX;
 output M_AXI_GP0_ARVALID;

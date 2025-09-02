@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Sat Aug 16 01:48:00 2025
+//Date        : Tue Sep  2 00:42:11 2025
 //Host        : LAPTOP-85RG0KL6 running 64-bit major release  (build 9200)
 //Command     : generate_target System_wrapper.bd
 //Design      : System_wrapper
@@ -34,7 +34,8 @@ module System_wrapper
     UART_0_0_rxd,
     UART_0_0_txd,
     adc_clk,
-    din_0);
+    din_0,
+    hardtrigger_0);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -60,6 +61,7 @@ module System_wrapper
   output UART_0_0_txd;
   output [0:0]adc_clk;
   input [15:0]din_0;
+  input hardtrigger_0;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -86,6 +88,7 @@ module System_wrapper
   wire UART_0_0_txd;
   wire [0:0]adc_clk;
   wire [15:0]din_0;
+  wire hardtrigger_0;
 
   System System_i
        (.DDR_addr(DDR_addr),
@@ -112,5 +115,6 @@ module System_wrapper
         .UART_0_0_rxd(UART_0_0_rxd),
         .UART_0_0_txd(UART_0_0_txd),
         .adc_clk(adc_clk),
-        .din_0(din_0));
+        .din_0(din_0),
+        .hardtrigger_0(hardtrigger_0));
 endmodule

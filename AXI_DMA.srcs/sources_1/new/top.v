@@ -24,7 +24,8 @@ module top(
     input wire [11:0] adc,
     output wire adc_clk,
     output wire tx,
-    input wire rx
+    input wire rx,
+    input wire hardtrigger
     );
   wire [3:0]  dummy_bits;
  assign dummy_bits=4'h0;
@@ -34,7 +35,8 @@ module top(
    .din_0({dummy_bits,adc}),
    .adc_clk(adc_clk),
    .UART_0_0_rxd(rx),
-    .UART_0_0_txd(tx)
+    .UART_0_0_txd(tx),
+    .hardtrigger_0(hardtrigger)
    
  );
  

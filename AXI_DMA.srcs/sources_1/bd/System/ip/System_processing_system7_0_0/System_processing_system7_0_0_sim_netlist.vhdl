@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Sat Aug 16 01:50:52 2025
+-- Date        : Tue Aug 19 23:08:00 2025
 -- Host        : LAPTOP-85RG0KL6 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               D:/Xilinx/projects/axi_2_dma/AXI_DMA/AXI_DMA.srcs/sources_1/bd/System/ip/System_processing_system7_0_0/System_processing_system7_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top System_processing_system7_0_0 -prefix
+--               System_processing_system7_0_0_ System_processing_system7_0_0_sim_netlist.vhdl
 -- Design      : System_processing_system7_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -70,9 +70,9 @@ entity System_processing_system7_0_0_processing_system7_v5_5_processing_system7 
     ENET1_MDIO_I : in STD_LOGIC;
     ENET1_EXT_INTIN : in STD_LOGIC;
     ENET1_GMII_RXD : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    GPIO_I : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    GPIO_O : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    GPIO_T : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    GPIO_I : in STD_LOGIC_VECTOR ( 32 downto 0 );
+    GPIO_O : out STD_LOGIC_VECTOR ( 32 downto 0 );
+    GPIO_T : out STD_LOGIC_VECTOR ( 32 downto 0 );
     I2C0_SDA_I : in STD_LOGIC;
     I2C0_SDA_O : out STD_LOGIC;
     I2C0_SDA_T : out STD_LOGIC;
@@ -709,7 +709,7 @@ entity System_processing_system7_0_0_processing_system7_v5_5_processing_system7 
   attribute C_DQ_WIDTH : integer;
   attribute C_DQ_WIDTH of System_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 32;
   attribute C_EMIO_GPIO_WIDTH : integer;
-  attribute C_EMIO_GPIO_WIDTH of System_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 2;
+  attribute C_EMIO_GPIO_WIDTH of System_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 33;
   attribute C_EN_EMIO_ENET0 : integer;
   attribute C_EN_EMIO_ENET0 of System_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
   attribute C_EN_EMIO_ENET1 : integer;
@@ -814,10 +814,8 @@ entity System_processing_system7_0_0_processing_system7_v5_5_processing_system7 
   attribute C_USE_S_AXI_HP3 of System_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of System_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "System_processing_system7_0_0.hwdef";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of System_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "processing_system7_v5_5_processing_system7";
   attribute POWER : string;
-  attribute POWER of System_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666666} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={16} clockFreq={533.333333} readRate={0.5} writeRate={0.5} /><IO interface={UART} ioStandard={} bidis={0} ioBank={} clockFreq={100.000000} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} /><AXI interface={S_AXI_HP0} dataWidth={64} clockFreq={100} usageRate={0.5} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={100} usageRate={0.5} />/>";
+  attribute POWER of System_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666666} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={16} clockFreq={533.333333} readRate={0.5} writeRate={0.5} /><IO interface={UART} ioStandard={} bidis={0} ioBank={} clockFreq={100.000000} usageRate={0.5} /><IO interface={QSPI} ioStandard={LVCMOS33} bidis={7} ioBank={Vcco_p0} clockFreq={200} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} /><AXI interface={S_AXI_HP0} dataWidth={64} clockFreq={100} usageRate={0.5} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={100} usageRate={0.5} />/>";
   attribute USE_TRACE_DATA_EDGE_DETECTOR : integer;
   attribute USE_TRACE_DATA_EDGE_DETECTOR of System_processing_system7_0_0_processing_system7_v5_5_processing_system7 : entity is 0;
 end System_processing_system7_0_0_processing_system7_v5_5_processing_system7;
@@ -906,7 +904,7 @@ architecture STRUCTURE of System_processing_system7_0_0_processing_system7_v5_5_
   signal buffered_PS_CLK : STD_LOGIC;
   signal buffered_PS_PORB : STD_LOGIC;
   signal buffered_PS_SRSTB : STD_LOGIC;
-  signal gpio_out_t_n : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal gpio_out_t_n : STD_LOGIC_VECTOR ( 32 downto 0 );
   signal NLW_PS7_i_EMIOENET0GMIITXEN_UNCONNECTED : STD_LOGIC;
   signal NLW_PS7_i_EMIOENET0GMIITXER_UNCONNECTED : STD_LOGIC;
   signal NLW_PS7_i_EMIOENET1GMIITXEN_UNCONNECTED : STD_LOGIC;
@@ -916,8 +914,8 @@ architecture STRUCTURE of System_processing_system7_0_0_processing_system7_v5_5_
   signal NLW_PS7_i_EMIOTRACECTL_UNCONNECTED : STD_LOGIC;
   signal NLW_PS7_i_EMIOENET0GMIITXD_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal NLW_PS7_i_EMIOENET1GMIITXD_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal NLW_PS7_i_EMIOGPIOO_UNCONNECTED : STD_LOGIC_VECTOR ( 63 downto 2 );
-  signal NLW_PS7_i_EMIOGPIOTN_UNCONNECTED : STD_LOGIC_VECTOR ( 63 downto 2 );
+  signal NLW_PS7_i_EMIOGPIOO_UNCONNECTED : STD_LOGIC_VECTOR ( 63 downto 33 );
+  signal NLW_PS7_i_EMIOGPIOTN_UNCONNECTED : STD_LOGIC_VECTOR ( 63 downto 33 );
   signal NLW_PS7_i_EMIOTRACEDATA_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_PS7_i_MAXIGP0ARCACHE_UNCONNECTED : STD_LOGIC_VECTOR ( 1 to 1 );
   signal NLW_PS7_i_MAXIGP0AWCACHE_UNCONNECTED : STD_LOGIC_VECTOR ( 1 to 1 );
@@ -1184,6 +1182,86 @@ GND: unisim.vcomponents.GND
       I0 => gpio_out_t_n(0),
       O => GPIO_T(0)
     );
+\GPIO_T[10]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(10),
+      O => GPIO_T(10)
+    );
+\GPIO_T[11]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(11),
+      O => GPIO_T(11)
+    );
+\GPIO_T[12]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(12),
+      O => GPIO_T(12)
+    );
+\GPIO_T[13]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(13),
+      O => GPIO_T(13)
+    );
+\GPIO_T[14]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(14),
+      O => GPIO_T(14)
+    );
+\GPIO_T[15]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(15),
+      O => GPIO_T(15)
+    );
+\GPIO_T[16]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(16),
+      O => GPIO_T(16)
+    );
+\GPIO_T[17]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(17),
+      O => GPIO_T(17)
+    );
+\GPIO_T[18]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(18),
+      O => GPIO_T(18)
+    );
+\GPIO_T[19]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(19),
+      O => GPIO_T(19)
+    );
 \GPIO_T[1]_INST_0\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
@@ -1191,6 +1269,174 @@ GND: unisim.vcomponents.GND
         port map (
       I0 => gpio_out_t_n(1),
       O => GPIO_T(1)
+    );
+\GPIO_T[20]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(20),
+      O => GPIO_T(20)
+    );
+\GPIO_T[21]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(21),
+      O => GPIO_T(21)
+    );
+\GPIO_T[22]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(22),
+      O => GPIO_T(22)
+    );
+\GPIO_T[23]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(23),
+      O => GPIO_T(23)
+    );
+\GPIO_T[24]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(24),
+      O => GPIO_T(24)
+    );
+\GPIO_T[25]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(25),
+      O => GPIO_T(25)
+    );
+\GPIO_T[26]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(26),
+      O => GPIO_T(26)
+    );
+\GPIO_T[27]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(27),
+      O => GPIO_T(27)
+    );
+\GPIO_T[28]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(28),
+      O => GPIO_T(28)
+    );
+\GPIO_T[29]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(29),
+      O => GPIO_T(29)
+    );
+\GPIO_T[2]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(2),
+      O => GPIO_T(2)
+    );
+\GPIO_T[30]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(30),
+      O => GPIO_T(30)
+    );
+\GPIO_T[31]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(31),
+      O => GPIO_T(31)
+    );
+\GPIO_T[32]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(32),
+      O => GPIO_T(32)
+    );
+\GPIO_T[3]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(3),
+      O => GPIO_T(3)
+    );
+\GPIO_T[4]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(4),
+      O => GPIO_T(4)
+    );
+\GPIO_T[5]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(5),
+      O => GPIO_T(5)
+    );
+\GPIO_T[6]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(6),
+      O => GPIO_T(6)
+    );
+\GPIO_T[7]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(7),
+      O => GPIO_T(7)
+    );
+\GPIO_T[8]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(8),
+      O => GPIO_T(8)
+    );
+\GPIO_T[9]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => gpio_out_t_n(9),
+      O => GPIO_T(9)
     );
 I2C0_SCL_T_INST_0: unisim.vcomponents.LUT1
     generic map(
@@ -1334,12 +1580,12 @@ PS7_i: unisim.vcomponents.PS7
       EMIOENET1PTPSYNCFRAMETX => ENET1_PTP_SYNC_FRAME_TX,
       EMIOENET1SOFRX => ENET1_SOF_RX,
       EMIOENET1SOFTX => ENET1_SOF_TX,
-      EMIOGPIOI(63 downto 2) => B"00000000000000000000000000000000000000000000000000000000000000",
-      EMIOGPIOI(1 downto 0) => GPIO_I(1 downto 0),
-      EMIOGPIOO(63 downto 2) => NLW_PS7_i_EMIOGPIOO_UNCONNECTED(63 downto 2),
-      EMIOGPIOO(1 downto 0) => GPIO_O(1 downto 0),
-      EMIOGPIOTN(63 downto 2) => NLW_PS7_i_EMIOGPIOTN_UNCONNECTED(63 downto 2),
-      EMIOGPIOTN(1 downto 0) => gpio_out_t_n(1 downto 0),
+      EMIOGPIOI(63 downto 33) => B"0000000000000000000000000000000",
+      EMIOGPIOI(32 downto 0) => GPIO_I(32 downto 0),
+      EMIOGPIOO(63 downto 33) => NLW_PS7_i_EMIOGPIOO_UNCONNECTED(63 downto 33),
+      EMIOGPIOO(32 downto 0) => GPIO_O(32 downto 0),
+      EMIOGPIOTN(63 downto 33) => NLW_PS7_i_EMIOGPIOTN_UNCONNECTED(63 downto 33),
+      EMIOGPIOTN(32 downto 0) => gpio_out_t_n(32 downto 0),
       EMIOI2C0SCLI => I2C0_SCL_I,
       EMIOI2C0SCLO => I2C0_SCL_O,
       EMIOI2C0SCLTN => I2C0_SCL_T_n,
@@ -2868,9 +3114,9 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity System_processing_system7_0_0 is
   port (
-    GPIO_I : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    GPIO_O : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    GPIO_T : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    GPIO_I : in STD_LOGIC_VECTOR ( 32 downto 0 );
+    GPIO_O : out STD_LOGIC_VECTOR ( 32 downto 0 );
+    GPIO_T : out STD_LOGIC_VECTOR ( 32 downto 0 );
     UART0_TX : out STD_LOGIC;
     UART0_RX : in STD_LOGIC;
     M_AXI_GP0_ARVALID : out STD_LOGIC;
@@ -3275,7 +3521,7 @@ architecture STRUCTURE of System_processing_system7_0_0 is
   attribute C_DQ_WIDTH : integer;
   attribute C_DQ_WIDTH of inst : label is 32;
   attribute C_EMIO_GPIO_WIDTH : integer;
-  attribute C_EMIO_GPIO_WIDTH of inst : label is 2;
+  attribute C_EMIO_GPIO_WIDTH of inst : label is 33;
   attribute C_EN_EMIO_ENET0 : integer;
   attribute C_EN_EMIO_ENET0 of inst : label is 0;
   attribute C_EN_EMIO_ENET1 : integer;
@@ -3381,7 +3627,7 @@ architecture STRUCTURE of System_processing_system7_0_0 is
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of inst : label is "System_processing_system7_0_0.hwdef";
   attribute POWER : string;
-  attribute POWER of inst : label is "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666666} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={16} clockFreq={533.333333} readRate={0.5} writeRate={0.5} /><IO interface={UART} ioStandard={} bidis={0} ioBank={} clockFreq={100.000000} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} /><AXI interface={S_AXI_HP0} dataWidth={64} clockFreq={100} usageRate={0.5} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={100} usageRate={0.5} />/>";
+  attribute POWER of inst : label is "<PROCESSOR name={system} numA9Cores={2} clockFreq={666.666666} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={16} clockFreq={533.333333} readRate={0.5} writeRate={0.5} /><IO interface={UART} ioStandard={} bidis={0} ioBank={} clockFreq={100.000000} usageRate={0.5} /><IO interface={QSPI} ioStandard={LVCMOS33} bidis={7} ioBank={Vcco_p0} clockFreq={200} usageRate={0.5} /><PLL domain={Processor} vco={1333.333} /><PLL domain={Memory} vco={1066.667} /><PLL domain={IO} vco={1600.000} /><AXI interface={S_AXI_HP0} dataWidth={64} clockFreq={100} usageRate={0.5} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={100} usageRate={0.5} />/>";
   attribute USE_TRACE_DATA_EDGE_DETECTOR : integer;
   attribute USE_TRACE_DATA_EDGE_DETECTOR of inst : label is 0;
   attribute X_INTERFACE_INFO : string;
@@ -3664,9 +3910,9 @@ inst: entity work.System_processing_system7_0_0_processing_system7_v5_5_processi
       FTMT_P2F_TRIG_1 => NLW_inst_FTMT_P2F_TRIG_1_UNCONNECTED,
       FTMT_P2F_TRIG_2 => NLW_inst_FTMT_P2F_TRIG_2_UNCONNECTED,
       FTMT_P2F_TRIG_3 => NLW_inst_FTMT_P2F_TRIG_3_UNCONNECTED,
-      GPIO_I(1 downto 0) => GPIO_I(1 downto 0),
-      GPIO_O(1 downto 0) => GPIO_O(1 downto 0),
-      GPIO_T(1 downto 0) => GPIO_T(1 downto 0),
+      GPIO_I(32 downto 0) => GPIO_I(32 downto 0),
+      GPIO_O(32 downto 0) => GPIO_O(32 downto 0),
+      GPIO_T(32 downto 0) => GPIO_T(32 downto 0),
       I2C0_SCL_I => '0',
       I2C0_SCL_O => NLW_inst_I2C0_SCL_O_UNCONNECTED,
       I2C0_SCL_T => NLW_inst_I2C0_SCL_T_UNCONNECTED,

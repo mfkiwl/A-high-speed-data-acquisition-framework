@@ -24,6 +24,7 @@ localparam [7:0] MODE_IMM = 8'd3,
 reg [WIDTH-1:0] sync_reg1;
 reg [WIDTH-1:0] sync_reg2;
 reg [WIDTH-1:0] local_reg;
+reg [WIDTH-1:0] local_reg2;
 
 // hard trigger signal
 reg sync_hardtrig1;
@@ -32,6 +33,9 @@ reg sync_hardtrig3;
 
 // switching
 reg switching;
+
+//switching for threshold trigger
+reg threshold_trig;
 
 // sync the input signal to local clk
 always @(posedge clk or posedge reset) begin
@@ -44,6 +48,7 @@ always @(posedge clk or posedge reset) begin
         sync_hardtrig3 <= 1'b0;
         switching <= 1'b0;
         trig_condition <= 1'b0;
+        threshold_trig<=1'b0;
     end else begin
         sync_reg1 <= sample_in;
         sync_reg2 <= sync_reg1;
@@ -65,8 +70,12 @@ always @(posedge clk or posedge reset) begin
             local_reg <= sync_reg2;
         end
         
-        // Default value
-        trig_condition <= 1'b0;
+       local_reg2<=local_reg;
+       
+       if (local_reg2!=local_reg) begin
+         threshold_trig=1'b1;
+         end
+
         
         // Trigger condition logic
         case (local_reg[WIDTH-1:WIDTH-8]) // Assuming r_mode is your mode selection register
@@ -77,15 +86,17 @@ always @(posedge clk or posedge reset) begin
             
             MODE_GT: begin
                 // Trigger when adc > threshold
-                if (adc > local_reg[15:0]) begin
+                if (adc > local_reg[15:0]  && threshold_trig==1'b1) begin
                     trig_condition <= 1'b1;
+                       threshold_trig=1'b0;
                 end
             end
             
             MODE_LT: begin
                 // Trigger when adc < threshold
-                if (adc < local_reg[15:0]) begin
+                if (adc < local_reg[15:0] && threshold_trig==1'b1) begin
                     trig_condition <= 1'b1;
+                    threshold_trig=1'b0;
                 end
             end
             

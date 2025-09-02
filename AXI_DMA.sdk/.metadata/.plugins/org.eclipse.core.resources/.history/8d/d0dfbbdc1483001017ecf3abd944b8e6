@@ -1,0 +1,222 @@
+/*****************************************************************************
+ *	实验流程：
+ *	1.初始化AXI DMA
+ *	2.设置Tx和Rx中断
+ *	3.提交传输
+ *	4.等待传输完成
+ *	5.检查传输状态并校验数据
+ *	6.打印测试结果
+ ******************************************************************************/
+
+#include "COMMON.h"
+
+#define TRANS_LENGTH    512	//发送长度，这里最大值为2^16-1=65535
+#define RX_INTR_ID		XPAR_FABRIC_AXI_DMA_0_S2MM_INTROUT_INTR	//RX的中断号
+#define UART_DEVICE_ID      XPAR_XUARTPS_0_DEVICE_ID  // the UART device
+#define GPIO_DEVICE_ID  	XPAR_XGPIOPS_0_DEVICE_ID  // the gpio device
+// #define TX_INTR_ID		XPAR_FABRIC_AXIDMA_0_MM2S_INTROUT_VEC_ID	//TX的中断号
+// #define TX_BUFFER_BASE	0x1200000				//TX缓冲区的基地址
+#define RX_BUFFER_BASE	0x1400000				//RX缓冲区的基地址
+
+extern XUartPs_Config *Config;
+extern XGpioPs Gpio;
+
+int main(void) {
+	int Index;					//计数变量
+	// uint16_t Error_Cnt = 0;		//错误计数
+	// uint16_t *TxBufferPtr;		//传输数据的指针
+	uint16_t *RxBufferPtr;		//接收数据的指针
+
+	//将指针TxBufferPtr指向TX_BUFFER_BASE
+	// TxBufferPtr = (uint16_t *)TX_BUFFER_BASE;
+	//将指针RxBufferPtr指向RX_BUFFER_BASE
+	RxBufferPtr = (uint16_t *) RX_BUFFER_BASE;
+
+	Xil_DCacheDisable(); // 完全禁用数据缓存
+
+	//initialization uart and gpio
+	uart_initial();
+	Gpio_Init();
+
+	//初始化通用中断控制器
+	ScuGic_Init();
+
+	//给TxBufferPtr赋值为0~255
+	/*for(Index = 0; Index < TRANS_LENGTH; Index ++) {
+	 TxBufferPtr[Index] = Index;
+	 }*/
+
+	while (1) {
+
+		//reset the input buffer
+		XGpioPs_WritePin(&Gpio, BANK1_START_PIN, 1);
+		usleep(1000);
+		XGpioPs_WritePin(&Gpio, BANK1_START_PIN, 0);
+		//初始化AXI DMA
+		AXI_DMA_Init(&AxiDma0, XPAR_AXIDMA_0_DEVICE_ID);
+
+		//设置中断服务函数
+		// AXI_DMA_TxInt_Init(&AxiDma0, TX_INTR_ID, TxIntrHandler);
+		AXI_DMA_RxInt_Init(&AxiDma0, RX_INTR_ID, RxIntrHandler);
+
+		//在开始传输测试之前清除中断状态标志
+		TxDone = 0;
+		RxDone = 0;
+		Error = 0;
+
+		u8 frequency_register;
+		u32 buffer_size;
+		// Polling: wait until 1 byte is received
+		while (!XUartPs_IsReceiveData(Config->BaseAddress))
+			;
+		frequency_register = XUartPs_RecvByte(Config->BaseAddress);
+		double freq0 = (double) frequency_register;
+		// dirve clk1
+		clk_wiz_cfg(CLK_WIZ_ID, freq0);
+
+		u8 lsb, msb, dumy;
+
+		// Wait for and read first byte (LSB)
+		while (!XUartPs_IsReceiveData(Config->BaseAddress))
+			; // Wait for data
+		lsb = XUartPs_RecvByte(Config->BaseAddress);
+
+		// Wait for and read second byte (MSB)
+		while (!XUartPs_IsReceiveData(Config->BaseAddress))
+			; // Wait for data
+		msb = XUartPs_RecvByte(Config->BaseAddress);
+
+		buffer_size = (msb << 8) | lsb;
+
+		//reset the buffer
+		for (Index = 0; Index < buffer_size / 2; Index++) {
+			RxBufferPtr[Index] = 0;
+		}
+
+		// enable the input fifo
+		// XGpioPs_WritePin(&Gpio, EMIO_START_PIN, 1);
+
+		//在DMA传输之前刷新Buffer
+		// Xil_DCacheFlushRange((UINTPTR)TxBufferPtr, TRANS_LENGTH*2);
+
+		//开启数据传输
+		// XAxiDma_SimpleTransfer(&AxiDma0,(UINTPTR) TxBufferPtr,TRANS_LENGTH*2, XAXIDMA_DMA_TO_DEVICE);
+
+		XAxiDma_SimpleTransfer(&AxiDma0, (UINTPTR) RxBufferPtr, buffer_size,
+		XAXIDMA_DEVICE_TO_DMA);
+
+		// Xil_DCacheInvalidateRange((UINTPTR) RxBufferPtr, TRANS_LENGTH * 2);
+
+		u16 trigger_threshold;
+
+		//waiting for the trigger signal, first trigger type
+		while (!XUartPs_IsReceiveData(Config->BaseAddress))
+			;
+		u8 trigger_type = XUartPs_RecvByte(Config->BaseAddress);
+		switch (trigger_type) {
+		// un trigger
+		case 0:
+			// assign the entire bank0 to 0
+			XGpioPs_Write(&Gpio, 2, 0x00000000);
+			while (!XUartPs_IsReceiveData(Config->BaseAddress))
+				;
+			dumy = XUartPs_RecvByte(Config->BaseAddress);
+			while (!XUartPs_IsReceiveData(Config->BaseAddress))
+				;
+			dumy = XUartPs_RecvByte(Config->BaseAddress);
+			break;
+			// trigger immediately
+		case 3:
+			// assign the last byte to 3
+			XGpioPs_Write(&Gpio, 2, 0x00030000);
+			while (!XUartPs_IsReceiveData(Config->BaseAddress))
+				;
+			dumy = XUartPs_RecvByte(Config->BaseAddress);
+			while (!XUartPs_IsReceiveData(Config->BaseAddress))
+				;
+			dumy = XUartPs_RecvByte(Config->BaseAddress);
+			break;
+			// hard trigger on g16 pin
+		case 4:
+			// assign the last byte to 4
+			// XGpioPs_WriteReg(XPAR_PS7_GPIO_0_BASEADDR, XGPIOPS_DATA_OFFSET, 0xFFFFFFFF);
+			XGpioPs_Write(&Gpio, 2, 0x00040000);
+			while (!XUartPs_IsReceiveData(Config->BaseAddress))
+				;
+			dumy = XUartPs_RecvByte(Config->BaseAddress);
+			while (!XUartPs_IsReceiveData(Config->BaseAddress))
+				;
+			dumy = XUartPs_RecvByte(Config->BaseAddress);
+			break;
+			// trigger threshold larger than
+		case 1:
+			// retrieve the other two bytes
+
+			// Wait for and read first byte (LSB)
+			while (!XUartPs_IsReceiveData(Config->BaseAddress))
+				; // Wait for data
+			lsb = XUartPs_RecvByte(Config->BaseAddress);
+
+			// Wait for and read second byte (MSB)
+			while (!XUartPs_IsReceiveData(Config->BaseAddress))
+				; // Wait for data
+			msb = XUartPs_RecvByte(Config->BaseAddress);
+
+			trigger_threshold = (msb << 8) | lsb;
+			//send the trigger
+
+			XGpioPs_Write(&Gpio, 2, (0x01 << 16) | trigger_threshold);
+			break;
+			// trigger threshold less than
+		case 2:
+			// retrieve the other two bytes
+
+			// Wait for and read first byte (LSB)
+			while (!XUartPs_IsReceiveData(Config->BaseAddress))
+				; // Wait for data
+			lsb = XUartPs_RecvByte(Config->BaseAddress);
+
+			// Wait for and read second byte (MSB)
+			while (!XUartPs_IsReceiveData(Config->BaseAddress))
+				; // Wait for data
+			msb = XUartPs_RecvByte(Config->BaseAddress);
+
+			trigger_threshold = (msb << 8) | lsb;
+			//send the trigger
+
+			XGpioPs_Write(&Gpio, 2, (0x02 << 16) | trigger_threshold);
+
+			break;
+
+		}
+
+		//等待TX完成、或者RX完成、或者传输错误，否则一直等待
+		while (!TxDone && !RxDone && !Error) {
+			/* 等待 */
+
+		}
+
+		// disable the input buffer
+		//XGpioPs_WritePin(&Gpio, EMIO_START_PIN, 0);
+		// un trigger
+		XGpioPs_Write(&Gpio, 2, 0x00000000);
+
+		// send the captured data to host
+		uint32_t Length_in_u32 = buffer_size / 4;
+		for (uint32_t i = 0; i < Length_in_u32; i++) {
+			// Read 32-bit word from memory
+			// Xil_Out32((u32)RxBuffer + i*4, 0xFFFFFFFF);
+			uint32_t data = Xil_In32((u32) RxBufferPtr + i * 4);
+
+			// Send each byte (LSB first)
+
+			XUartPs_SendByte(Config->BaseAddress, (data >> 16) & 0xFF); // Byte 2
+			XUartPs_SendByte(Config->BaseAddress, (data >> 24) & 0xFF); // Byte 3
+			XUartPs_SendByte(Config->BaseAddress, (data >> 0) & 0xFF); // Byte 0
+			XUartPs_SendByte(Config->BaseAddress, (data >> 8) & 0xFF); // Byte 1
+		}
+
+	}
+
+	return 0;
+}

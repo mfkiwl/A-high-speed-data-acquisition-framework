@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="top_hw_platform_0" key="programflash.hwplatform"/>
+	<item value="" key="top_hw_platform_0-offSet"/>
+	<item value="false" key="top_hw_platform_0-verifyFlash"/>
+	<item value="D:\Xilinx\projects\axi_2_dma\AXI_DMA\AXI_DMA.sdk\daq\bootimage\BOOT.bin" key="top_hw_platform_0-imgFile"/>
+	<item value="qspi-x4-single" key="top_hw_platform_0-flashType"/>
+	<item value="false" key="top_hw_platform_0-blankCheck"/>
+	<item value="D:\Xilinx\projects\axi_2_dma\AXI_DMA\AXI_DMA.sdk\fsbl\Debug\fsbl.elf" key="top_hw_platform_0-fsblFile"/>
+	<item value="Local" key="top_hw_platform_0-target"/>
+	<item value="Auto Detect" key="top_hw_platform_0-device"/>
+</section>

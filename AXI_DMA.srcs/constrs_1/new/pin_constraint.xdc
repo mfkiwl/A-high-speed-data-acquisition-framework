@@ -36,3 +36,18 @@ set_property PACKAGE_PIN Y20 [get_ports {adc[8]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {adc[8]}]
 
 set_property PACKAGE_PIN AA22 [get_ports {adc[6]}]
+
+set_property PACKAGE_PIN G15 [get_ports hardtrigger]
+set_property IOSTANDARD LVCMOS33 [get_ports hardtrigger]
+set_property SLEW FAST [get_ports adc_clk]
+set_property DRIVE 8 [get_ports adc_clk]
+
+
+
+
+
+
+set_property PULLDOWN true [get_ports hardtrigger]
+
+set_property IOSTANDARD LVCMOS33 [get_ports dedicated_clk]
+set_property PACKAGE_PIN M19 [get_ports dedicated_clk]

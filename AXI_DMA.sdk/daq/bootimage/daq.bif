@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]D:\Xilinx\projects\axi_2_dma\AXI_DMA\AXI_DMA.sdk\fsbl\Debug\fsbl.elf
+	D:\Xilinx\projects\axi_2_dma\AXI_DMA\AXI_DMA.sdk\top_hw_platform_0\top.bit
+	D:\Xilinx\projects\axi_2_dma\AXI_DMA\AXI_DMA.sdk\daq\Debug\daq.elf
+}

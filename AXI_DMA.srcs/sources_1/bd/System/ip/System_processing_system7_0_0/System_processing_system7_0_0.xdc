@@ -17,11 +17,11 @@
 ############################################################################
 # Clock constraints                                                        #
 ############################################################################
-create_clock -name clk_fpga_0 -period "10" [get_pins "PS7_i/FCLKCLK[0]"]
-set_input_jitter clk_fpga_0 0.3
-#The clocks are asynchronous, user should constrain them appropriately.#
 create_clock -name clk_fpga_1 -period "20" [get_pins "PS7_i/FCLKCLK[1]"]
 set_input_jitter clk_fpga_1 0.6
+#The clocks are asynchronous, user should constrain them appropriately.#
+create_clock -name clk_fpga_0 -period "10" [get_pins "PS7_i/FCLKCLK[0]"]
+set_input_jitter clk_fpga_0 0.3
 #The clocks are asynchronous, user should constrain them appropriately.#
 
 
@@ -29,6 +29,49 @@ set_input_jitter clk_fpga_1 0.6
 # I/O STANDARDS and Location Constraints                                   #
 ############################################################################
 
+#  Quad SPI Flash / qspi_fbclk / MIO[8]
+set_property iostandard "LVCMOS33" [get_ports "MIO[8]"]
+set_property PACKAGE_PIN "E5" [get_ports "MIO[8]"]
+set_property slew "slow" [get_ports "MIO[8]"]
+set_property drive "8" [get_ports "MIO[8]"]
+set_property PIO_DIRECTION "OUTPUT" [get_ports "MIO[8]"]
+#  Quad SPI Flash / qspi0_sclk / MIO[6]
+set_property iostandard "LVCMOS33" [get_ports "MIO[6]"]
+set_property PACKAGE_PIN "A4" [get_ports "MIO[6]"]
+set_property slew "slow" [get_ports "MIO[6]"]
+set_property drive "8" [get_ports "MIO[6]"]
+set_property PIO_DIRECTION "OUTPUT" [get_ports "MIO[6]"]
+#  Quad SPI Flash / qspi0_io[3]/HOLD_B / MIO[5]
+set_property iostandard "LVCMOS33" [get_ports "MIO[5]"]
+set_property PACKAGE_PIN "A3" [get_ports "MIO[5]"]
+set_property slew "slow" [get_ports "MIO[5]"]
+set_property drive "8" [get_ports "MIO[5]"]
+set_property PIO_DIRECTION "BIDIR" [get_ports "MIO[5]"]
+#  Quad SPI Flash / qspi0_io[2] / MIO[4]
+set_property iostandard "LVCMOS33" [get_ports "MIO[4]"]
+set_property PACKAGE_PIN "E4" [get_ports "MIO[4]"]
+set_property slew "slow" [get_ports "MIO[4]"]
+set_property drive "8" [get_ports "MIO[4]"]
+set_property PIO_DIRECTION "BIDIR" [get_ports "MIO[4]"]
+#  Quad SPI Flash / qspi0_io[1] / MIO[3]
+set_property iostandard "LVCMOS33" [get_ports "MIO[3]"]
+set_property PACKAGE_PIN "F6" [get_ports "MIO[3]"]
+set_property slew "slow" [get_ports "MIO[3]"]
+set_property drive "8" [get_ports "MIO[3]"]
+set_property PIO_DIRECTION "BIDIR" [get_ports "MIO[3]"]
+#  Quad SPI Flash / qspi0_io[0] / MIO[2]
+set_property iostandard "LVCMOS33" [get_ports "MIO[2]"]
+set_property PACKAGE_PIN "A2" [get_ports "MIO[2]"]
+set_property slew "slow" [get_ports "MIO[2]"]
+set_property drive "8" [get_ports "MIO[2]"]
+set_property PIO_DIRECTION "BIDIR" [get_ports "MIO[2]"]
+#  Quad SPI Flash / qspi0_ss_b / MIO[1]
+set_property iostandard "LVCMOS33" [get_ports "MIO[1]"]
+set_property PACKAGE_PIN "A1" [get_ports "MIO[1]"]
+set_property slew "slow" [get_ports "MIO[1]"]
+set_property drive "8" [get_ports "MIO[1]"]
+set_property pullup "TRUE" [get_ports "MIO[1]"]
+set_property PIO_DIRECTION "OUTPUT" [get_ports "MIO[1]"]
 set_property iostandard "SSTL15_T_DCI" [get_ports "DDR_VRP"]
 set_property PACKAGE_PIN "N7" [get_ports "DDR_VRP"]
 set_property slew "FAST" [get_ports "DDR_VRP"]
